@@ -99,6 +99,18 @@
 }());
 
 (function () {
+  var meta = document.querySelector('meta[name="theme-color"]');
+  var hero = document.querySelector('.section--hero');
+  if (!meta || !hero) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    meta.content = entries[0].isIntersecting ? '#fffb91' : '#ffffff';
+  }, { threshold: 0 });
+
+  observer.observe(hero);
+}());
+
+(function () {
   var csSelectors = [
     '.cs-intro__columns',
     '.cs-card',
@@ -181,6 +193,8 @@
   var trigger = document.querySelector('.header__right .text-h3');
   var closeCursor = document.getElementById('closeCursor');
   var cursorTrailer = document.querySelector('.cursor-trailer');
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+  var savedThemeColor = '';
 
   function onCloseCursorMove(e) {
     if (closeCursor) {
@@ -199,6 +213,7 @@
       document.addEventListener('mousemove', onCloseCursorMove);
     }
     if (cursorTrailer) cursorTrailer.style.opacity = '0';
+    if (themeMeta) { savedThemeColor = themeMeta.content; themeMeta.content = '#fffb91'; }
   }
 
   function closeOverlay() {
@@ -210,6 +225,7 @@
       document.removeEventListener('mousemove', onCloseCursorMove);
     }
     if (cursorTrailer) cursorTrailer.style.opacity = '';
+    if (themeMeta && savedThemeColor) themeMeta.content = savedThemeColor;
   }
 
   if (trigger) {
