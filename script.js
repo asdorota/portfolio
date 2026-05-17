@@ -179,17 +179,32 @@
 
   var overlay = document.getElementById('aboutOverlay');
   var trigger = document.querySelector('.header__right .text-h3');
+  var closeCursor = document.getElementById('closeCursor');
+
+  function onCloseCursorMove(e) {
+    if (closeCursor) {
+      closeCursor.style.transform = 'translate(' + (e.clientX - 36) + 'px, ' + (e.clientY - 11.5) + 'px)';
+    }
+  }
 
   function openOverlay() {
     overlay.classList.add('about-overlay--open');
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
+    if (closeCursor) {
+      closeCursor.classList.add('close-cursor--visible');
+      document.addEventListener('mousemove', onCloseCursorMove);
+    }
   }
 
   function closeOverlay() {
     overlay.classList.remove('about-overlay--open');
     document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
+    if (closeCursor) {
+      closeCursor.classList.remove('close-cursor--visible');
+      document.removeEventListener('mousemove', onCloseCursorMove);
+    }
   }
 
   if (trigger) {
