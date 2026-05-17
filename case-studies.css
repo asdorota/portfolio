@@ -118,6 +118,19 @@
   flex: 0 0 564px;
 }
 
+/* ─── Full-width text + 2-col body block (DS-reveal pattern) ────────────── */
+
+.cs-full-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.cs-full-section__heading {
+  margin: 0;
+}
+
 /* ─── Link resets for anchor-tag wrappers ────────────────────────────────── */
 
 a.cs-related__img-wrap {

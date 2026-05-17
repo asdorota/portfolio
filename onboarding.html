@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Onboarding Redesign — Dorota Bojarovic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="transactions.css" />
+    <link rel="stylesheet" href="case-studies.css" />
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <div class="frame">
+
+      <header class="header">
+        <div class="header__left">
+          <a href="index.html" class="text-h3 header__logo">Dorota Bojarovic</a>
+        </div>
+        <div class="header__right">
+          <p class="text-h3">About</p>
+        </div>
+      </header>
+
+      <main class="cs-page">
+
+        <!-- Introduction -->
+        <section class="cs-intro">
+          <h1 class="text-h1 cs-intro__title">
+            Onboarding Redesign: Shifting from Web + App to App-Only
+          </h1>
+          <div class="cs-intro__columns">
+            <div class="cs-intro__left">
+              <p class="cs-section-label">CONTEXT</p>
+              <p class="text-b1">
+                With more secure features added to the Elfin app, Elfin was slowly
+                shifting toward app-only experiece, and Onboarding was a major
+                turning point in this shift.
+              </p>
+            </div>
+            <div class="cs-intro__right">
+              <div class="cs-meta-block">
+                <p class="cs-section-label">MY ROLE</p>
+                <ul class="cs-meta-values">
+                  <li>UI/UX Design</li>
+                </ul>
+              </div>
+              <div class="cs-meta-block">
+                <p class="cs-section-label">YEAR</p>
+                <ul class="cs-meta-values">
+                  <li>2024</li>
+                </ul>
+              </div>
+              <div class="cs-meta-block">
+                <p class="cs-section-label">PLATFORMS</p>
+                <ul class="cs-meta-values">
+                  <li>Web</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hero -->
+        <div class="cs-hero">
+          <div class="cs-hero__inner">
+            <img
+              class="cs-hero__img"
+              src="images/onboarding/onboarding-1-hero.jpg"
+              alt="Onboarding redesign hero"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="cs-content">
+
+          <!-- Problem -->
+          <div class="cs-card cs-card--problem">
+            <div class="cs-problem__cols">
+              <div class="cs-problem__col-label">
+                <p class="cs-section-label">PROBLEM</p>
+              </div>
+              <div class="cs-problem__col-body">
+                <div class="cs-problem">
+                  <h2 class="text-h1 cs-problem__heading">
+                    Elfin Market introduced Open Banking integration to assist with
+                    borrower eligibility checks. With Open Banking now core to
+                    onboarding, maintaining separate web and app experiences no
+                    longer made sense.
+                  </h2>
+                  <ul class="cs-problem__list">
+                    <li class="cs-problem__item">
+                      <div class="cs-problem__item-header">
+                        <span class="cs-problem__item-title">Potential increase of drop-offs and frustration</span>
+                      </div>
+                      <p class="cs-problem__item-desc">
+                        With open banking, users would securely connect to their
+                        banking app to verify financial information, which works well
+                        on mobile but creates friction on web, where users must leave
+                        the browser and manually return
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem image -->
+          <div class="cs-img-wrap cs-img-wrap--centered">
+            <img
+              class="cs-img"
+              src="images/onboarding/onboarding-2.jpg"
+              alt=""
+            />
+          </div>
+
+          <!-- The Approach -->
+          <div class="cs-centered-section">
+            <p class="cs-section-label">THE APPROACH</p>
+            <h3 class="text-h1">
+              The goal shifted from providing a complete onboarding experience on
+              web to creating a compelling entry point that drove users to download
+              the app. We had to:
+            </h3>
+            <ul class="cs-problem__list">
+              <li class="cs-problem__item">
+                <div class="cs-problem__item-header">
+                  <span class="cs-problem__item-title">Show value</span>
+                </div>
+                <p class="cs-problem__item-desc">
+                  Clearly communicate what the eligibility check offers and why
+                  it's worth the app download
+                </p>
+              </li>
+              <li class="cs-problem__item">
+                <div class="cs-problem__item-header">
+                  <span class="cs-problem__item-title">Reduce friction to minimum</span>
+                </div>
+                <p class="cs-problem__item-desc">
+                  Adding a mandatory app download step is painful. I focused on
+                  designing a clear call-to-action that worked across devices
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Solutions 1 -->
+          <div class="cs-centered-section">
+            <p class="cs-section-label">SOLUTIONS</p>
+            <h3 class="text-h1">QR code on desktop, app store CTA on mobile</h3>
+            <p class="text-b1">
+              Desktop users scanned a QR code that linked to a custom redirect
+              page. This page detected the user's device OS and automatically
+              routed them to the correct app store, eliminating any confusion or
+              extra steps.
+            </p>
+          </div>
+
+          <!-- Solutions 1 image -->
+          <div class="cs-img-wrap">
+            <img
+              class="cs-img"
+              src="images/onboarding/onboarding-3.jpg"
+              alt=""
+            />
+          </div>
+
+          <!-- DS-reveal: heading + 2-col text -->
+          <div class="cs-full-section">
+            <h3 class="text-h1 cs-full-section__heading">
+              Custom redirect page to detects OS and eliminates an extra step
+            </h3>
+            <div class="cs-text-cols">
+              <div class="cs-text-cols__col">
+                <p class="text-b1">
+                  Scanning QR code seamlessly transitioned the user from desktop
+                  to app store, aided by custom redirect page
+                </p>
+              </div>
+              <div class="cs-text-cols__col">
+                <p class="text-b1">
+                  We added brief copy and CTA to the custom redirect page in case
+                  user's system doesn't automatically redirect
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2-col grid 1: video + image -->
+          <div class="cs-grid-2">
+            <div class="cs-grid-2__item">
+              <video
+                src="images/onboarding/onboarding-4-vid.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+            <div class="cs-grid-2__item">
+              <img src="images/onboarding/onboarding-5.jpg" alt="" />
+            </div>
+          </div>
+
+          <!-- Solutions 2 -->
+          <div class="cs-centered-section">
+            <p class="cs-section-label">SOLUTIONS</p>
+            <h3 class="text-h1">
+              Moving away from generic messaging toward benefit-driven copy that
+              justified the extra step users were taking
+            </h3>
+            <p class="text-b1">
+              By prominently displaying the key value props (two product options,
+              eligibility check in less than 5 minutes, no credit score impact),
+              we showed users exactly what they'd gain, making the download feel
+              like a worthwhile decision rather than an inconvenient detour
+            </p>
+          </div>
+
+          <!-- 2-col grid 2: video + image -->
+          <div class="cs-grid-2">
+            <div class="cs-grid-2__item">
+              <video
+                src="images/onboarding/onboarding-6-vid.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+            <div class="cs-grid-2__item">
+              <img src="images/onboarding/onboarding-7.jpg" alt="" />
+            </div>
+          </div>
+
+          <!-- Impact -->
+          <div class="cs-card cs-card--problem">
+            <div class="cs-problem__cols">
+              <div class="cs-problem__col-label">
+                <p class="cs-section-label">IMPACT</p>
+              </div>
+              <div class="cs-problem__col-body">
+                <div class="cs-problem">
+                  <h2 class="text-h1 cs-problem__heading">
+                    The redesign successfully transitioned users to app-only
+                    onboarding without significant drop-off. By combining
+                    platform-specific CTAs with compelling product messaging, we
+                    maintained strong conversion rates despite adding an extra
+                    step to the journey.
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Relevant case studies -->
+          <div class="cs-related">
+            <h2 class="text-h1 cs-related__heading">Relevant case studies</h2>
+            <div class="cs-related__grid">
+              <article class="cs-related__card">
+                <a class="cs-related__img-wrap" href="transactions.html">
+                  <img
+                    src="images/borrower-transactions.png"
+                    alt=""
+                    class="cs-related__img"
+                  />
+                  <img
+                    src="images/borrower-transactions-hover.jpg"
+                    alt=""
+                    class="cs-related__hover-img"
+                  />
+                </a>
+                <div class="cs-related__text">
+                  <h3 class="cs-related__title">
+                    <a href="transactions.html">Borrower transactions: redesign and refine</a>
+                  </h3>
+                  <p class="text-b1 cs-related__desc">
+                    Improved UI and UX for better accessibility and added filtering
+                    for seeing borrowing and repayment breakdowns
+                  </p>
+                </div>
+              </article>
+              <article class="cs-related__card">
+                <a class="cs-related__img-wrap" href="early-repayments.html">
+                  <img
+                    src="images/early-repayments.png"
+                    alt=""
+                    class="cs-related__img"
+                  />
+                  <img
+                    src="images/early-repayments-hover.jpg"
+                    alt=""
+                    class="cs-related__hover-img"
+                  />
+                </a>
+                <div class="cs-related__text">
+                  <h3 class="cs-related__title">
+                    <a href="early-repayments.html">Early repayments: improved way of repaying the loans</a>
+                  </h3>
+                  <p class="text-b1 cs-related__desc">
+                    Implemented instant bank payments to repayment flow and improved
+                    UI, leading to less customer frustration and customer support
+                    tickets
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div><!-- /cs-content -->
+
+        <footer class="footer">
+          <div class="footer__row">
+            <div class="footer__left">
+              <div class="heading-block">
+                <p class="text-h1">Thank you for visiting, come back soon!</p>
+              </div>
+              <a class="button-link" href="assets/dorota-bojarovic-cv.pdf">
+                <span class="text-button">Download my CV</span>
+                <span class="icon icon--chevron-right" aria-hidden="true">
+                  <img src="images/chevron-right.svg" alt="" width="24" height="24" />
+                </span>
+              </a>
+            </div>
+            <a class="button-link footer__back" href="#">
+              <span class="text-button">Back to top</span>
+              <span class="icon icon--chevron-top" aria-hidden="true">
+                <img src="images/chevron-top.svg" alt="" width="24" height="24" />
+              </span>
+            </a>
+          </div>
+          <div class="footer__legal-row">
+            <p class="text-h5">Dorota Bojarovic©2026. All rights reserved.</p>
+          </div>
+        </footer>
+
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      (function () {
+        var header = document.querySelector(".header");
+        if (!header) return;
+        function syncHeaderBackground() {
+          header.classList.toggle("header--scrolled", window.scrollY > 0);
+        }
+        syncHeaderBackground();
+        window.addEventListener("scroll", syncHeaderBackground, { passive: true });
+      })();
+    </script>
+  </body>
+</html>
