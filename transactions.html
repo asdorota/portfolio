@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Borrower Transactions — Dorota Bojarovic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="transactions.css" />
+  </head>
+  <body>
+    <div class="frame">
+
+      <header class="header">
+        <div class="header__left">
+          <a href="index.html" class="text-h3 header__logo">Dorota Bojarovic</a>
+        </div>
+        <div class="header__right">
+          <p class="text-h3">About</p>
+        </div>
+      </header>
+
+      <main class="cs-page">
+
+        <!-- Introduction -->
+        <section class="cs-intro">
+          <h1 class="text-h1 cs-intro__title">
+            Borrower transactions:<br />redesign and refine
+          </h1>
+          <div class="cs-intro__columns">
+            <div class="cs-intro__left">
+              <p class="cs-section-label">CONTEXT</p>
+              <p class="text-b1">
+                Transaction tab is one of the core parts of the app, allowing
+                borrowers keep on top of their spending and repayments. The MVP
+                version was sufficient before physical payment card was released,
+                but with increased number of transactions it became obvious it
+                was lacking basic functionality.
+              </p>
+            </div>
+            <div class="cs-intro__right">
+              <div class="cs-meta-block">
+                <p class="cs-section-label">MY ROLE</p>
+                <ul class="cs-meta-values">
+                  <li>Product design</li>
+                  <li>Product management</li>
+                  <li>Prototyping</li>
+                </ul>
+              </div>
+              <div class="cs-meta-block">
+                <p class="cs-section-label">YEAR</p>
+                <ul class="cs-meta-values">
+                  <li>2023</li>
+                </ul>
+              </div>
+              <div class="cs-meta-block">
+                <p class="cs-section-label">PLATFORMS</p>
+                <ul class="cs-meta-values">
+                  <li>iOS, Android</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hero -->
+        <div class="cs-hero">
+          <div class="cs-hero__inner">
+            <img
+              class="cs-hero__img"
+              src="images/transactions/Transactions-1-hero.jpg"
+              alt="Borrower transactions hero"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="cs-content">
+
+          <!-- Problem -->
+          <div class="cs-card cs-card--problem">
+            <div class="cs-problem__cols">
+              <div class="cs-problem__col-label">
+                <p class="cs-section-label">PROBLEM</p>
+              </div>
+              <div class="cs-problem__col-body">
+                <div class="cs-problem">
+                  <h2 class="text-h1 cs-problem__heading">
+                    The MVP version of Transactions flow was in need of a serious redesign
+                  </h2>
+                  <ul class="cs-problem__list">
+                    <li class="cs-problem__item">
+                      <div class="cs-problem__item-header">
+                        <span class="cs-problem__num">01</span>
+                        <span class="cs-problem__item-title">Limited Filtering and Search Capabilities</span>
+                      </div>
+                      <p class="cs-problem__item-desc">
+                        Users struggled to locate specific transactions or track their spending
+                        patterns due to the lack of relevant filters and search options
+                      </p>
+                    </li>
+                    <li class="cs-problem__item">
+                      <div class="cs-problem__item-header">
+                        <span class="cs-problem__num">02</span>
+                        <span class="cs-problem__item-title">Unintuitive summary</span>
+                      </div>
+                      <p class="cs-problem__item-desc">
+                        Confusing interactions and data display made transactions summary
+                        feature less helpful
+                      </p>
+                    </li>
+                    <li class="cs-problem__item">
+                      <div class="cs-problem__item-header">
+                        <span class="cs-problem__num">03</span>
+                        <span class="cs-problem__item-title">Lack of information</span>
+                      </div>
+                      <p class="cs-problem__item-desc">
+                        Transactions displayed minimal details, making it difficult to
+                        quickly recognise a transaction
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem image -->
+          <div class="cs-img-wrap cs-img-wrap--centered">
+            <img
+              class="cs-img"
+              src="images/transactions/Transactions-2.jpg"
+              alt=""
+            />
+          </div>
+
+          <!-- Solution intro -->
+          <div class="cs-solution-intro">
+            <p class="cs-section-label">SOLUTION</p>
+            <p class="text-h1">
+              Working closely with iOS and Android developers we used mostly
+              existing Design System components to efficiently tackle these problems
+            </p>
+          </div>
+
+          <!-- Solution 01 — Filtering -->
+          <div class="cs-solution cs-solution--sidebar">
+            <div class="cs-solution__left">
+              <p class="cs-section-label cs-solution__num">01</p>
+              <h3 class="text-h1 cs-solution__title">Filtering</h3>
+              <p class="text-b1">
+                New filter bar with horizontal scroll chips allowed a way to
+                combine two new features — custom date filtering and transaction
+                type filtering
+              </p>
+              <p class="text-b1">
+                Date filtering opens in a modal allowing more space for custom
+                date filtering which was lacking in the previous version
+              </p>
+            </div>
+            <div class="cs-solution__right">
+              <div class="cs-media-wrap">
+                <img
+                  class="cs-img"
+                  src="images/transactions/Transactions-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="cs-media-wrap">
+                <img
+                  class="cs-img"
+                  src="images/transactions/Transactions-4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="cs-media-wrap">
+                <video
+                  class="cs-img"
+                  src="images/transactions/Transactions-5-vid.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution 02 — Transaction Summaries -->
+          <div class="cs-solution cs-solution--stacked">
+            <div class="cs-solution-intro cs-solution-intro--numbered">
+              <p class="cs-section-label">02</p>
+              <h3 class="text-h1 cs-solution__title">Transaction Summaries</h3>
+              <p class="text-b1">
+                Improved date filtering with custom date option and easy to select
+                pre-set options added flexibility. A dynamic Summary component at
+                the top of transactions gave users a clear overview of their
+                financial activity
+              </p>
+            </div>
+            <div class="cs-img-wrap">
+              <img
+                class="cs-img"
+                src="images/transactions/Transactions-6.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- Solution 03 — Individual transactions -->
+          <div class="cs-solution cs-solution--stacked">
+            <div class="cs-solution-intro cs-solution-intro--numbered">
+              <p class="cs-section-label">03</p>
+              <h3 class="text-h1 cs-solution__title">Individual transactions</h3>
+              <p class="text-b1">
+                Redesigned individual transaction cards with color coding for income
+                and expenses, improved readability, and added relevant metadata
+                (location, payment method, contact link) to help users quickly
+                verify and track their activity
+              </p>
+            </div>
+            <div class="cs-grid-3">
+              <div class="cs-grid-3__item">
+                <img src="images/transactions/Transactions-grid-1.jpg" alt="" />
+              </div>
+              <div class="cs-grid-3__item">
+                <img src="images/transactions/Transactions-grid-2.jpg" alt="" />
+              </div>
+              <div class="cs-grid-3__item">
+                <img src="images/transactions/Transactions-grid-3.jpg" alt="" />
+              </div>
+              <div class="cs-grid-3__item">
+                <img src="images/transactions/Transactions-grid-4.jpg" alt="" />
+              </div>
+              <div class="cs-grid-3__item">
+                <img src="images/transactions/Transactions-grid-5.jpg" alt="" />
+              </div>
+              <div class="cs-grid-3__item">
+                <img src="images/transactions/Transactions-grid-6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Impact -->
+          <div class="cs-card cs-card--impact">
+            <div class="cs-impact">
+              <div class="cs-impact__left">
+                <p class="cs-section-label">IMPACT</p>
+                <p class="text-h1">
+                  This redesign has enabled borrowers to fully track their spending
+                  and repayments with visual cues, custom date filters and
+                  comprehensive summary
+                </p>
+              </div>
+              <div class="cs-impact__right">
+                <video
+                  class="cs-img"
+                  src="images/transactions/Transactions-7-vid.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video>
+              </div>
+            </div>
+          </div>
+
+          <!-- Relevant case studies -->
+          <div class="cs-related">
+            <h2 class="text-h1 cs-related__heading">Relevant case studies</h2>
+            <div class="cs-related__grid">
+              <article class="cs-related__card">
+                <a class="cs-related__img-wrap" href="early-repayments.html">
+                  <img
+                    src="images/early-repayments.png"
+                    alt=""
+                    class="cs-related__img"
+                  />
+                  <img src="images/early-repayments-hover.jpg" alt="" class="cs-related__hover-img" />
+                </a>
+                <div class="cs-related__text">
+                  <h3 class="cs-related__title">
+                    <a href="early-repayments.html">Early repayments: improved way of repaying the loans</a>
+                  </h3>
+                  <p class="text-b1 cs-related__desc">
+                    Implemented instant bank payments to repayment flow and improved
+                    UI, leading to less customer frustration and customer support tickets
+                  </p>
+                </div>
+              </article>
+              <article class="cs-related__card">
+                <a class="cs-related__img-wrap" href="elfin-website.html">
+                  <img
+                    src="images/elfin-website.png"
+                    alt=""
+                    class="cs-related__img"
+                  />
+                  <img src="images/elfin-website-hover.jpg" alt="" class="cs-related__hover-img" />
+                </a>
+                <div class="cs-related__text">
+                  <h3 class="cs-related__title">
+                    <a href="elfin-website.html">Elfin Market website redesign</a>
+                  </h3>
+                  <p class="text-b1 cs-related__desc">
+                    Redesigned Elfin's website to reflect new branding and improved
+                    structure and credibility leading to better product trust.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div><!-- /cs-content -->
+
+        <footer class="footer">
+          <div class="footer__row">
+            <div class="footer__left">
+              <div class="heading-block">
+                <p class="text-h1">Thank you for visiting, come back soon!</p>
+              </div>
+              <a class="button-link" href="assets/dorota-bojarovic-cv.pdf">
+                <span class="text-button">Download my CV</span>
+                <span class="icon icon--chevron-right" aria-hidden="true">
+                  <img src="images/chevron-right.svg" alt="" width="24" height="24" />
+                </span>
+              </a>
+            </div>
+            <a class="button-link footer__back" href="#">
+              <span class="text-button">Back to top</span>
+              <span class="icon icon--chevron-top" aria-hidden="true">
+                <img src="images/chevron-top.svg" alt="" width="24" height="24" />
+              </span>
+            </a>
+          </div>
+          <div class="footer__legal-row">
+            <p class="text-h5">Dorota Bojarovic©2026. All rights reserved.</p>
+          </div>
+        </footer>
+
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      (function () {
+        var header = document.querySelector(".header");
+        if (!header) return;
+        function syncHeaderBackground() {
+          header.classList.toggle("header--scrolled", window.scrollY > 0);
+        }
+        syncHeaderBackground();
+        window.addEventListener("scroll", syncHeaderBackground, { passive: true });
+      })();
+    </script>
+  </body>
+</html>

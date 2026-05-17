@@ -1,0 +1,159 @@
+/* case-studies.css — shared additions for Design System, Early Repayments, Elfin Website
+   Relies on style.css + transactions.css base classes. */
+
+/* ─── Intro title max-width ─────────────────────────────────────────────── */
+
+.cs-intro__title {
+  max-width: 560px;
+}
+
+/* ─── 2-column image grid ────────────────────────────────────────────────── */
+
+.cs-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.cs-grid-2__item {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cs-grid-2__item img,
+.cs-grid-2__item video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ─── Centred 900 px text block — no card background ────────────────────── */
+
+.cs-centered-section {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.cs-centered-section .text-h1 {
+  margin: 0;
+}
+
+/* ─── Full-width yellow background section (ER Solutions intro) ──────────── */
+
+.cs-solutions-bg {
+  width: 100%;
+  background: var(--color-yellow-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-solutions-bg__inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-solutions-bg__inner .text-h1 {
+  margin: 0;
+}
+
+.cs-solutions-bg__image {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 0 40px;
+}
+
+.cs-solutions-bg__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ─── "Focus of this case study" pill badge ─────────────────────────────── */
+
+.cs-phase-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 40px;
+  background: var(--color-yellow-primary);
+  font-family: var(--font-family-font-1);
+  font-weight: 500;
+  font-size: var(--font-size-14);
+  line-height: 1.6;
+  color: var(--color-black-solid);
+  margin-bottom: 12px;
+}
+
+/* ─── Side-by-side text columns (ER Solution 01 sub-section) ─────────────── */
+
+.cs-text-cols {
+  display: flex;
+  gap: 12px;
+}
+
+.cs-text-cols__col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ─── Equal-split sidebar (ER Solution 02: 564 / 564 px) ────────────────── */
+
+.cs-solution--equal {
+  gap: 24px;
+}
+
+.cs-solution--equal .cs-solution__left {
+  flex: 0 0 564px;
+}
+
+.cs-solution--equal .cs-solution__right {
+  flex: 0 0 564px;
+}
+
+/* ─── Link resets for anchor-tag wrappers ────────────────────────────────── */
+
+a.cs-related__img-wrap {
+  display: block;
+  text-decoration: none;
+}
+
+.cs-related__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs-related__title a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .cs-solutions-bg__inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-text-cols {
+    flex-direction: column;
+  }
+
+  .cs-solutions-bg__inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

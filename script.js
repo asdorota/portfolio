@@ -1,0 +1,175 @@
+(function () {
+  var FILTER_MAP = {
+    all:             null,
+    app:             ['app'],
+    web:             ['web'],
+    'design-system': ['design-system']
+  };
+
+  var tabs  = document.querySelectorAll('.filter-tab[data-filter]');
+  var cards = document.querySelectorAll('.project-card[data-filter]');
+
+  function applyFilter(key) {
+    var allowed = FILTER_MAP[key];
+
+    tabs.forEach(function (tab) {
+      var active = tab.dataset.filter === key;
+      tab.classList.toggle('filter-tab--active',   active);
+      tab.classList.toggle('filter-tab--inactive', !active);
+    });
+
+    cards.forEach(function (card) {
+      var matches = allowed === null || allowed.indexOf(card.dataset.filter) !== -1;
+      if (matches) {
+        card.classList.remove('project-card--visible');
+        card.hidden = false;
+        void card.offsetWidth; // force reflow so animation replays
+        card.classList.add('project-card--visible');
+      } else {
+        card.hidden = true;
+        card.classList.remove('project-card--visible');
+      }
+    });
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      applyFilter(tab.dataset.filter);
+    });
+  });
+}());
+
+(function () {
+  var cards = document.querySelectorAll('.project-card');
+
+  cards.forEach(function (card) {
+    var title = card.querySelector('.project-card__title');
+    var body  = card.querySelector('.project-card__body');
+    if (title) title.classList.add('card-animate');
+    if (body)  body.classList.add('card-animate', 'card-animate--body');
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var card  = entry.target;
+      var title = card.querySelector('.project-card__title');
+      var body  = card.querySelector('.project-card__body');
+      if (title) title.classList.add('card-animate--visible');
+      if (body)  body.classList.add('card-animate--visible');
+      observer.unobserve(card);
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach(function (card) {
+    observer.observe(card);
+  });
+}());
+
+(function () {
+  var trailer = document.createElement('div');
+  trailer.className = 'cursor-trailer';
+  document.body.appendChild(trailer);
+
+  var mouseX = -100;
+  var mouseY = -100;
+  var trailerX = -100;
+  var trailerY = -100;
+
+  document.addEventListener('mousemove', function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function lerp(a, b, t) {
+    return a + (b - a) * t;
+  }
+
+  function animate() {
+    trailerX = lerp(trailerX, mouseX, 0.15);
+    trailerY = lerp(trailerY, mouseY, 0.15);
+    trailer.style.transform =
+      'translate(' + (trailerX - 5) + 'px, ' + (trailerY - 5) + 'px)';
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+}());
+
+(function () {
+  var overlayHTML =
+    '<div class="about-overlay" id="aboutOverlay" role="dialog" aria-label="About Dorota Bojarovic">' +
+    '  <div class="about-overlay__header">' +
+    '    <p class="text-h3 header__logo">Dorota Bojarovic</p>' +
+    '    <p class="text-h3">About</p>' +
+    '  </div>' +
+    '  <div class="about-overlay__band">' +
+    '    <div class="about-overlay__inner">' +
+    '      <div class="about-overlay__left">' +
+    '        <h2 class="about-overlay__heading">I’m Dorota — Product Designer with 3+ years experience working across product, UX/UI, and branding</h2>' +
+    '        <div class="about-overlay__body">' +
+    '          <p>I’ve spent the last few years designing and shipping products in a small, fast-moving fintech team.</p>' +
+    '          <p>Previous career ventures include editorial design at a rug magazine and architectural design for a small residential architecture firm. I enjoy learning new design skills and have done it all — 3D modelling, motion, branding, packaging, editorial, but I’m most passionate about solving real life problems for every day user with simple but effective design solutions.</p>' +
+    '        </div>' +
+    '        <a class="button-link about-overlay__cv" href="assets/dorota-bojarovic-cv.pdf">' +
+    '          <span class="text-button">Download my CV</span>' +
+    '          <span class="icon icon--chevron-right" aria-hidden="true">' +
+    '            <img src="images/chevron-right.svg" alt="" width="24" height="24" />' +
+    '          </span>' +
+    '        </a>' +
+    '      </div>' +
+    '      <div class="about-overlay__right">' +
+    '        <div class="about-overlay__entry">' +
+    '          <span>2024–now</span>' +
+    '          <span>FREELANCE, MOONPIE STUDIO</span>' +
+    '          <span>Branding</span>' +
+    '        </div>' +
+    '        <div class="about-overlay__entry">' +
+    '          <span>2021–2024</span>' +
+    '          <span>PRODUCT DESIGNER, ELFIN MARKET</span>' +
+    '          <span>UI/UX Design, Product Management</span>' +
+    '        </div>' +
+    '        <div class="about-overlay__entry">' +
+    '          <span>2019–2021</span>' +
+    '          <span>GRAPHIC DESIGNER, HALI PUBLICATIONS</span>' +
+    '          <span>Editorial and books, UI/UX Design</span>' +
+    '        </div>' +
+    '        <div class="about-overlay__entry">' +
+    '          <span>2016–2018</span>' +
+    '          <span>ARCHITECTURAL ASSISTANT, ALU</span>' +
+    '          <span>Visualisations, 3D modelling, Presentations</span>' +
+    '        </div>' +
+    '      </div>' +
+    '    </div>' +
+    '  </div>' +
+    '</div>';
+
+  document.body.insertAdjacentHTML('beforeend', overlayHTML);
+
+  var overlay = document.getElementById('aboutOverlay');
+  var trigger = document.querySelector('.header__right .text-h3');
+
+  function openOverlay() {
+    overlay.classList.add('about-overlay--open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeOverlay() {
+    overlay.classList.remove('about-overlay--open');
+    document.body.style.overflow = '';
+  }
+
+  if (trigger) {
+    trigger.addEventListener('click', openOverlay);
+  }
+
+  overlay.addEventListener('click', function (e) {
+    if (!e.target.closest('.about-overlay__cv')) {
+      closeOverlay();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeOverlay(); }
+  });
+}());
