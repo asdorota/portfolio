@@ -180,6 +180,7 @@
   var overlay = document.getElementById('aboutOverlay');
   var trigger = document.querySelector('.header__right .text-h3');
   var closeCursor = document.getElementById('closeCursor');
+  var cursorTrailer = document.querySelector('.cursor-trailer');
 
   function onCloseCursorMove(e) {
     if (closeCursor) {
@@ -195,6 +196,7 @@
       closeCursor.classList.add('close-cursor--visible');
       document.addEventListener('mousemove', onCloseCursorMove);
     }
+    if (cursorTrailer) cursorTrailer.style.opacity = '0';
   }
 
   function closeOverlay() {
@@ -205,6 +207,7 @@
       closeCursor.classList.remove('close-cursor--visible');
       document.removeEventListener('mousemove', onCloseCursorMove);
     }
+    if (cursorTrailer) cursorTrailer.style.opacity = '';
   }
 
   if (trigger) {
