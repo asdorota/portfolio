@@ -185,6 +185,8 @@
   function onCloseCursorMove(e) {
     if (closeCursor) {
       closeCursor.style.transform = 'translate(' + (e.clientX - 36) + 'px, ' + (e.clientY - 11.5) + 'px)';
+      var under = document.elementFromPoint(e.clientX, e.clientY);
+      closeCursor.style.opacity = (under && under.closest('.about-overlay__cv')) ? '0' : '1';
     }
   }
 
