@@ -99,49 +99,47 @@
 (function () {
   var overlayHTML =
     '<div class="about-overlay" id="aboutOverlay" role="dialog" aria-label="About Dorota Bojarovic">' +
-    '  <div class="about-overlay__header">' +
-    '    <p class="text-h3 header__logo">Dorota Bojarovic</p>' +
-    '    <p class="text-h3">About</p>' +
-    '  </div>' +
-    '  <div class="about-overlay__band">' +
-    '    <div class="about-overlay__inner">' +
-    '      <div class="about-overlay__left">' +
-    '        <h2 class="about-overlay__heading">I’m Dorota — Product Designer with 3+ years experience working across product, UX/UI, and branding</h2>' +
-    '        <div class="about-overlay__body">' +
-    '          <p>I’ve spent the last few years designing and shipping products in a small, fast-moving fintech team.</p>' +
-    '          <p>Previous career ventures include editorial design at a rug magazine and architectural design for a small residential architecture firm. I enjoy learning new design skills and have done it all — 3D modelling, motion, branding, packaging, editorial, but I’m most passionate about solving real life problems for every day user with simple but effective design solutions.</p>' +
-    '        </div>' +
-    '        <a class="button-link about-overlay__cv" href="assets/dorota-bojarovic-cv.pdf">' +
-    '          <span class="text-button">Download my CV</span>' +
-    '          <span class="icon icon--chevron-right" aria-hidden="true">' +
-    '            <img src="images/chevron-right.svg" alt="" width="24" height="24" />' +
-    '          </span>' +
-    '        </a>' +
-    '      </div>' +
-    '      <div class="about-overlay__right">' +
-    '        <div class="about-overlay__entry">' +
-    '          <span>2024–now</span>' +
-    '          <span>FREELANCE, MOONPIE STUDIO</span>' +
-    '          <span>Branding</span>' +
-    '        </div>' +
-    '        <div class="about-overlay__entry">' +
-    '          <span>2021–2024</span>' +
-    '          <span>PRODUCT DESIGNER, ELFIN MARKET</span>' +
-    '          <span>UI/UX Design, Product Management</span>' +
-    '        </div>' +
-    '        <div class="about-overlay__entry">' +
-    '          <span>2019–2021</span>' +
-    '          <span>GRAPHIC DESIGNER, HALI PUBLICATIONS</span>' +
-    '          <span>Editorial and books, UI/UX Design</span>' +
-    '        </div>' +
-    '        <div class="about-overlay__entry">' +
-    '          <span>2016–2018</span>' +
-    '          <span>ARCHITECTURAL ASSISTANT, ALU</span>' +
-    '          <span>Visualisations, 3D modelling, Presentations</span>' +
-    '        </div>' +
-    '      </div>' +
-    '    </div>' +
-    '  </div>' +
+    '<div class="about-overlay__header">' +
+    '<p class="text-h3 header__logo">Dorota Bojarovic</p>' +
+    '<p class="text-h3">About</p>' +
+    '</div>' +
+    '<div class="about-overlay__inner">' +
+    '<div class="about-overlay__left">' +
+    '<h2 class="about-overlay__heading">I’m Dorota — Product Designer with 3+ years experience working across product, UX/UI, and branding</h2>' +
+    '<div class="about-overlay__body">' +
+    '<p>I’ve spent the last few years designing and shipping products in a small, fast-moving fintech team.</p>' +
+    '<p>Previous career ventures include editorial design at a rug magazine and architectural design for a small residential architecture firm. I enjoy learning new design skills and have done it all — 3D modelling, motion, branding, packaging, editorial, but I’m most passionate about solving real life problems for every day user with simple but effective design solutions.</p>' +
+    '</div>' +
+    '<a class="button-link about-overlay__cv" href="assets/dorota-bojarovic-cv.pdf">' +
+    '<span class="text-button">Download my CV</span>' +
+    '<span class="icon icon--chevron-right" aria-hidden="true">' +
+    '<img src="images/chevron-right.svg" alt="" width="24" height="24" />' +
+    '</span>' +
+    '</a>' +
+    '</div>' +
+    '<div class="about-overlay__right">' +
+    '<div class="about-overlay__entry">' +
+    '<span>2024–now</span>' +
+    '<span>FREELANCE, MOONPIE STUDIO</span>' +
+    '<span>Branding</span>' +
+    '</div>' +
+    '<div class="about-overlay__entry">' +
+    '<span>2021–2024</span>' +
+    '<span>PRODUCT DESIGNER, ELFIN MARKET</span>' +
+    '<span>UI/UX Design, Product Management</span>' +
+    '</div>' +
+    '<div class="about-overlay__entry">' +
+    '<span>2019–2021</span>' +
+    '<span>GRAPHIC DESIGNER, HALI PUBLICATIONS</span>' +
+    '<span>Editorial and books, UI/UX Design</span>' +
+    '</div>' +
+    '<div class="about-overlay__entry">' +
+    '<span>2016–2018</span>' +
+    '<span>ARCHITECTURAL ASSISTANT, ALU</span>' +
+    '<span>Visualisations, 3D modelling, Presentations</span>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
     '</div>';
 
   document.body.insertAdjacentHTML('beforeend', overlayHTML);
@@ -151,11 +149,13 @@
 
   function openOverlay() {
     overlay.classList.add('about-overlay--open');
+    document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   }
 
   function closeOverlay() {
     overlay.classList.remove('about-overlay--open');
+    document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
   }
 
