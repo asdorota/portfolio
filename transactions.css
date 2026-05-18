@@ -560,6 +560,10 @@
     flex-direction: column;
   }
 
+  .cs-problem__col-label {
+    margin-bottom: 16px;
+  }
+
   .cs-card {
     padding: 24px;
   }
