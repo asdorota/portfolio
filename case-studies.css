@@ -146,9 +146,20 @@
 }
 
 .cs-problem__item--featured {
-  background: var(--color-yellow-primary);
+  display: flex;
   padding: 16px;
-  border-radius: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: #FFFEDB;
+}
+
+.cs-problem__item--indented {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 /* ─── Side-by-side text columns (ER Solution 01 sub-section) ─────────────── */
