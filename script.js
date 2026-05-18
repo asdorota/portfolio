@@ -99,6 +99,26 @@
 }());
 
 (function () {
+  var title = document.getElementById('ds-solution-title');
+  var body  = document.getElementById('ds-solution-body');
+  var img3  = document.getElementById('ds-img-3');
+  if (!title || !body || !img3) return;
+
+  var defaultTitle = 'Use of components';
+  var defaultBody  = 'Together with iOS and Android engineers, we have established a base system of UI components, using the atomic principles and adapting them where necessary.';
+  var altTitle     = 'Variations';
+  var altBody      = 'Noticing few repeating patterns in a financial app environment, we’ve developed a few more complex components. These spanned across multiple user journeys.';
+
+  var observer = new IntersectionObserver(function (entries) {
+    var isVisible = entries[0].isIntersecting;
+    title.textContent = isVisible ? altTitle : defaultTitle;
+    body.textContent  = isVisible ? altBody  : defaultBody;
+  }, { threshold: 0.5 });
+
+  observer.observe(img3);
+}());
+
+(function () {
   var meta = document.querySelector('meta[name="theme-color"]');
   var hero = document.querySelector('.section--hero');
   if (!meta || !hero) return;
