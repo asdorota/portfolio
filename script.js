@@ -59,7 +59,7 @@
       if (body)  body.classList.add('card-animate--visible');
       observer.unobserve(card);
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.2 });
 
   cards.forEach(function (card) {
     observer.observe(card);
@@ -134,7 +134,7 @@
       entry.target.classList.add('card-animate--visible');
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.2 });
 
   sections.forEach(function (el) {
     observer.observe(el);
