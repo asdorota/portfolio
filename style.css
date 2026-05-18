@@ -359,6 +359,11 @@ body {
 
 .filter-tab--inactive {
   background: var(--color-yellow-primary-80);
+  transition: background 200ms ease;
+}
+
+.filter-tab--inactive:hover {
+  background: var(--color-yellow-primary);
 }
 
 /* Project card — node 15:783 pattern */
