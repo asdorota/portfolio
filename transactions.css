@@ -151,7 +151,7 @@
 }
 
 .cs-problem__col-body .text-b1 + .text-b1 {
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 /* ─── Problem list ───────────────────────────────────────────────────────── */
