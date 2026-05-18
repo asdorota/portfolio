@@ -125,6 +125,22 @@ body {
   color: var(--color-black-solid);
   text-transform: uppercase;
   white-space: nowrap;
+  position: relative;
+}
+
+.text-button::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 300ms ease;
+}
+
+.button-link:hover .text-button::after {
+  width: 100%;
 }
 
 .text-filter {
@@ -715,6 +731,22 @@ body {
 
 .header__right .text-h3 {
   cursor: pointer;
+  position: relative;
+}
+
+.header__right .text-h3::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 300ms ease;
+}
+
+.header__right .text-h3:hover::after {
+  width: 100%;
 }
 
 /* ─── About Overlay ─────────────────────────────────────────────────────── */
