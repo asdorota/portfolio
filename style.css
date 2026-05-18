@@ -665,7 +665,7 @@ body {
   }
 
   .footer__back {
-    align-self: flex-start;
+    display: none;
   }
 
   .text-h5 {
