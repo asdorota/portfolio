@@ -292,14 +292,6 @@
   gap: 12px;
 }
 
-.cs-solution-intro--numbered {
-  padding: 39px 40px 40px;
-}
-
-.cs-solution-intro--numbered .cs-solution__title {
-  margin-top: 10px;
-}
-
 /* ─── 3×2 image grid ─────────────────────────────────────────────────────── */
 
 .cs-grid-3 {
