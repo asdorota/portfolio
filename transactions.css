@@ -425,6 +425,15 @@
   color: var(--color-yellow-grey-80);
 }
 
+.cs-related__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs-related__title a:hover {
+  text-decoration: underline;
+}
+
 .cs-related__desc {
   margin: 0;
 }
