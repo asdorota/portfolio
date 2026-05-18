@@ -121,7 +121,7 @@
 .cs-card {
   background: #fafafa;
   border-radius: 16px;
-  padding: 40px;
+  padding: 56px 40px;
 }
 
 .cs-card__inner {
@@ -147,6 +147,7 @@
 
 .cs-problem__col-body {
   flex: 0 0 75%;
+  max-width: 700px;
 }
 
 /* ─── Problem list ───────────────────────────────────────────────────────── */
