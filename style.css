@@ -111,6 +111,11 @@ body {
   line-height: inherit;
 }
 
+.text-b2 {
+  font-size: 16px;
+  line-height: 150%;
+}
+
 /* Button / filter label — 14 / Medium / 1.1 / uppercase */
 .text-button {
   font-family: var(--font-family-font-1);

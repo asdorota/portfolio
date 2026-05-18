@@ -205,8 +205,6 @@
   margin: 0;
   font-family: var(--font-family-font-1);
   font-weight: 500;
-  font-size: var(--font-size-16);
-  line-height: 1.2;
   color: var(--color-yellow-grey-50);
   max-width: 678px;
 }
