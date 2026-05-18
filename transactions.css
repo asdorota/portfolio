@@ -150,6 +150,10 @@
   max-width: 700px;
 }
 
+.cs-problem__col-body .text-b1 + .text-b1 {
+  margin-top: 8px;
+}
+
 /* ─── Problem list ───────────────────────────────────────────────────────── */
 
 .cs-problem {
