@@ -556,6 +556,10 @@
     gap: 40px;
   }
 
+  .cs-problem__cols {
+    flex-direction: column;
+  }
+
   .cs-card {
     padding: 24px;
   }
