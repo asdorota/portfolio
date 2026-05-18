@@ -214,6 +214,11 @@
     }
     if (cursorTrailer) cursorTrailer.style.opacity = '0';
     if (themeMeta) { savedThemeColor = themeMeta.content; themeMeta.content = '#fffb91'; }
+    if (trigger) {
+      trigger.textContent = '×';
+      trigger.removeEventListener('click', openOverlay);
+      trigger.addEventListener('click', closeOverlay);
+    }
   }
 
   function closeOverlay() {
@@ -226,6 +231,11 @@
     }
     if (cursorTrailer) cursorTrailer.style.opacity = '';
     if (themeMeta && savedThemeColor) themeMeta.content = savedThemeColor;
+    if (trigger) {
+      trigger.textContent = 'About';
+      trigger.removeEventListener('click', closeOverlay);
+      trigger.addEventListener('click', openOverlay);
+    }
   }
 
   if (trigger) {
