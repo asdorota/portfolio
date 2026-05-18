@@ -294,6 +294,15 @@
   padding-bottom: 40px;
 }
 
+.cs-solution--stacked .cs-centered-section {
+  padding-top: 40px;
+}
+
+.cs-solution--stacked .cs-img-wrap,
+.cs-solution--stacked .cs-grid-3 {
+  margin-top: 40px;
+}
+
 /* ─── 3×2 image grid ─────────────────────────────────────────────────────── */
 
 .cs-grid-3 {
