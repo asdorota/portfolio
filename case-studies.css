@@ -71,7 +71,7 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 24px 24px;
+  padding: 40px 24px 0;
   display: flex;
   flex-direction: column;
 }
@@ -91,7 +91,7 @@
 .cs-solutions-bg__image {
   width: 100%;
   max-width: 1200px;
-  padding: 0 0 40px;
+  padding: 0;
 }
 
 .cs-solutions-bg__image img {
