@@ -69,15 +69,23 @@
 
 .cs-solutions-bg__inner {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 40px 24px 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+}
+
+.cs-solutions-bg__inner .cs-section-label {
+  margin-bottom: 8px;
 }
 
 .cs-solutions-bg__inner .text-h1 {
-  margin: 0;
+  margin: 0 0 24px;
+}
+
+.cs-solutions-bg__inner > :last-child {
+  margin-bottom: 0;
 }
 
 .cs-solutions-bg__image {
