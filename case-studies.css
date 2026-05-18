@@ -35,6 +35,35 @@
   object-fit: cover;
 }
 
+/* Image cover fill — used on DS-8 to match neighbour height */
+.cs-img--cover {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Instant hover image swap */
+.cs-img-swap {
+  position: relative;
+}
+
+.cs-img-swap__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.cs-img-swap:hover .cs-img-swap__default {
+  opacity: 0;
+}
+
+.cs-img-swap:hover .cs-img-swap__hover {
+  opacity: 1;
+}
+
 /* ─── Centred 900 px text block — no card background ────────────────────── */
 
 .cs-centered-section {
