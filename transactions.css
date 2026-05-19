@@ -621,7 +621,8 @@
 
   .cs-impact__right video {
     width: 100%;
-    height: auto;
+    height: 600px;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
   }
