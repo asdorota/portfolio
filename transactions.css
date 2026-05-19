@@ -79,7 +79,7 @@
   font-weight: 500;
   font-size: var(--font-size-16);
   line-height: 1.2;
-  color: var(--color-yellow-grey-50);
+  color: var(--color-yellow-grey-80);
 }
 
 /* ─── Hero ───────────────────────────────────────────────────────────────── */
@@ -209,7 +209,7 @@
   margin: 0;
   font-family: var(--font-family-font-1);
   font-weight: 500;
-  color: var(--color-yellow-grey-50);
+  color: var(--color-yellow-grey-80);
   max-width: 678px;
 }
 
@@ -362,6 +362,17 @@
   height: 600px;
   object-fit: cover;
   border-radius: 16px;
+}
+
+/* ─── Related card meta (year + pills) — hidden on desktop, shown on mobile ─ */
+
+.cs-related__meta {
+  display: none;
+}
+
+.cs-related__platforms {
+  display: none;
+  gap: 4px;
 }
 
 /* ─── Relevant case studies ──────────────────────────────────────────────── */
@@ -529,7 +540,7 @@
 /* 422w (mobile) */
 @media (max-width: 767px) {
   .cs-intro {
-    padding: 80px 24px 0;
+    padding: 80px 16px 0;
   }
 
   .cs-intro__columns {
@@ -548,11 +559,11 @@
   }
 
   .cs-hero {
-    padding: 40px 24px 0;
+    padding: 40px 16px 0;
   }
 
   .cs-content {
-    padding: 40px 24px 0;
+    padding: 40px 16px 0;
     gap: 40px;
   }
 
@@ -608,12 +619,43 @@
     width: 100%;
   }
 
+  .cs-impact__right video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
   .cs-related__grid {
     grid-template-columns: 1fr;
   }
 
+  .cs-related__card {
+    gap: 16px;
+  }
+
   .cs-related__img-wrap {
-    height: 220px;
+    height: 250px;
+  }
+
+  .cs-related__text {
+    gap: 12px;
+  }
+
+  .cs-related__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cs-related__platforms {
+    display: flex;
+  }
+
+  .cs-related__desc {
+    font-size: 14px;
+    line-height: 1.2;
   }
 
   .cs-related {
