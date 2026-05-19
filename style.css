@@ -922,21 +922,25 @@ body {
 }
 
 @media (max-width: 767px) {
+  #closeCursor {
+    display: none !important;
+  }
+
   .about-overlay {
     justify-content: flex-start;
     overflow-y: auto;
     padding-top: 72px;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
   }
 
   .about-overlay__header {
-    padding: 10.41px 24px 10.39px;
+    padding: 10.41px 16px 10.39px;
   }
 
   .about-overlay__inner {
     flex-direction: column;
     gap: 32px;
-    padding: 0 24px;
+    padding: 0 16px;
   }
 
   .about-overlay__left {
@@ -954,6 +958,10 @@ body {
   .about-overlay__right {
     white-space: normal;
     font-size: 14px;
+  }
+
+  .about-scroll-hint.about-scroll-hint--active {
+    display: flex;
   }
 }
 
@@ -1006,4 +1014,43 @@ body {
 
 .close-cursor__icon {
   flex-shrink: 0;
+}
+
+/* ─── Scroll hint — mobile About overlay ────────────────────────────────── */
+
+.about-scroll-hint {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 101;
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+
+.about-scroll-hint--hidden {
+  opacity: 0;
+}
+
+.about-scroll-pill {
+  background: #000;
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-family: var(--font-family-font-1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  white-space: nowrap;
+  margin-bottom: 8px;
+}
+
+.about-scroll-gradient {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #fffb91);
 }

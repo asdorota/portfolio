@@ -208,13 +208,29 @@
     '</div>';
 
   document.body.insertAdjacentHTML('beforeend', overlayHTML);
+  document.body.insertAdjacentHTML('beforeend',
+    '<div class="about-scroll-hint" id="aboutScrollHint">' +
+    '<div class="about-scroll-pill">scroll to read more</div>' +
+    '<div class="about-scroll-gradient"></div>' +
+    '</div>'
+  );
 
   var overlay = document.getElementById('aboutOverlay');
+  var scrollHint = document.getElementById('aboutScrollHint');
   var trigger = document.querySelector('.header__right .text-h3');
   var closeCursor = document.getElementById('closeCursor');
   var cursorTrailer = document.querySelector('.cursor-trailer');
   var themeMeta = document.querySelector('meta[name="theme-color"]');
   var savedThemeColor = '';
+
+  function onOverlayScroll() {
+    if (!scrollHint) return;
+    if (overlay.scrollTop > 0) {
+      scrollHint.classList.add('about-scroll-hint--hidden');
+    } else {
+      scrollHint.classList.remove('about-scroll-hint--hidden');
+    }
+  }
 
   function onCloseCursorMove(e) {
     if (closeCursor) {
@@ -226,6 +242,7 @@
 
   function openOverlay() {
     overlay.classList.add('about-overlay--open');
+    overlay.scrollTop = 0;
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
     if (closeCursor) {
@@ -238,6 +255,11 @@
       trigger.textContent = '×';
       trigger.removeEventListener('click', openOverlay);
       trigger.addEventListener('click', closeOverlay);
+    }
+    if (scrollHint) {
+      scrollHint.classList.remove('about-scroll-hint--hidden');
+      scrollHint.classList.add('about-scroll-hint--active');
+      overlay.addEventListener('scroll', onOverlayScroll, { passive: true });
     }
   }
 
@@ -255,6 +277,10 @@
       trigger.textContent = 'About';
       trigger.removeEventListener('click', closeOverlay);
       trigger.addEventListener('click', openOverlay);
+    }
+    if (scrollHint) {
+      scrollHint.classList.remove('about-scroll-hint--active');
+      overlay.removeEventListener('scroll', onOverlayScroll);
     }
   }
 
