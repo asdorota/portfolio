@@ -210,7 +210,7 @@
   document.body.insertAdjacentHTML('beforeend', overlayHTML);
   document.body.insertAdjacentHTML('beforeend',
     '<div class="about-scroll-hint" id="aboutScrollHint">' +
-    '<div class="about-scroll-pill">scroll to read more</div>' +
+    '<div class="about-scroll-pill">SCROLL</div>' +
     '<div class="about-scroll-gradient"></div>' +
     '</div>'
   );

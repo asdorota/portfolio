@@ -1020,7 +1020,7 @@ body {
 
 .about-scroll-hint {
   position: fixed;
-  bottom: 0;
+  bottom: 24px;
   left: 0;
   right: 0;
   display: none;
@@ -1040,7 +1040,7 @@ body {
   background: #000;
   color: #fff;
   border-radius: 999px;
-  padding: 4px 16px;
+  padding: 6px 16px;
   font-family: var(--font-family-font-1);
   font-weight: 500;
   font-size: 14px;
