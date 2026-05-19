@@ -123,11 +123,15 @@
   var hero = document.querySelector('.section--hero');
   if (!meta || !hero) return;
 
-  var observer = new IntersectionObserver(function (entries) {
+  function updateTheme(entries) {
     meta.content = entries[0].isIntersecting ? '#fffb91' : '#ffffff';
-  }, { threshold: 0 });
+  }
 
+  var observer = new IntersectionObserver(updateTheme, { threshold: 0, rootMargin: '0px' });
   observer.observe(hero);
+
+  var rect = hero.getBoundingClientRect();
+  updateTheme([{ isIntersecting: rect.bottom > 0 && rect.top < window.innerHeight }]);
 }());
 
 (function () {
