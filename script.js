@@ -130,8 +130,10 @@
   var observer = new IntersectionObserver(updateTheme, { threshold: 0, rootMargin: '0px' });
   observer.observe(hero);
 
-  var rect = hero.getBoundingClientRect();
-  updateTheme([{ isIntersecting: rect.bottom > 0 && rect.top < window.innerHeight }]);
+  setTimeout(function () {
+    var rect = hero.getBoundingClientRect();
+    updateTheme([{ isIntersecting: rect.bottom > 0 && rect.top < window.innerHeight }]);
+  }, 100);
 }());
 
 (function () {
