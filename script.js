@@ -262,7 +262,7 @@
       trigger.removeEventListener('click', openOverlay);
       trigger.addEventListener('click', closeOverlay);
     }
-    var overlayTrigger = document.querySelector('.about-overlay__header .text-h3');
+    var overlayTrigger = document.querySelector('.about-overlay__header .text-h3:last-child');
     if (overlayTrigger) overlayTrigger.textContent = '( Close )';
     if (scrollHint) {
       scrollHint.classList.remove('about-scroll-hint--hidden');
@@ -286,7 +286,7 @@
       trigger.removeEventListener('click', closeOverlay);
       trigger.addEventListener('click', openOverlay);
     }
-    var overlayTrigger = document.querySelector('.about-overlay__header .text-h3');
+    var overlayTrigger = document.querySelector('.about-overlay__header .text-h3:last-child');
     if (overlayTrigger) overlayTrigger.textContent = 'About';
     if (scrollHint) {
       scrollHint.classList.remove('about-scroll-hint--active');
