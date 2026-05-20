@@ -181,7 +181,7 @@
     '<p>I’ve spent the last few years designing and shipping products in a small, fast-moving fintech team.</p>' +
     '<p>Previous career ventures include editorial design at a rug magazine and architectural design for a small residential architecture firm. I enjoy learning new design skills and have done it all — 3D modelling, motion, branding, packaging, editorial, but I’m most passionate about solving real life problems for every day user with simple but effective design solutions.</p>' +
     '</div>' +
-    '<a class="button-link about-overlay__cv" href="assets/dorota-bojarovic-cv.pdf">' +
+    '<a class="button-link about-overlay__cv" href="assets/dorota-bojarovic-cv.pdf?v=2">' +
     '<span class="text-button">Download my CV</span>' +
     '<span class="icon icon--chevron-right" aria-hidden="true">' +
     '<img src="images/chevron-right.svg" alt="" width="24" height="24" />' +
@@ -262,6 +262,8 @@
       trigger.removeEventListener('click', openOverlay);
       trigger.addEventListener('click', closeOverlay);
     }
+    var overlayTrigger = document.querySelector('.about-overlay__header .text-h3');
+    if (overlayTrigger) overlayTrigger.textContent = '( Close )';
     if (scrollHint) {
       scrollHint.classList.remove('about-scroll-hint--hidden');
       scrollHint.classList.add('about-scroll-hint--active');
@@ -284,6 +286,8 @@
       trigger.removeEventListener('click', closeOverlay);
       trigger.addEventListener('click', openOverlay);
     }
+    var overlayTrigger = document.querySelector('.about-overlay__header .text-h3');
+    if (overlayTrigger) overlayTrigger.textContent = 'About';
     if (scrollHint) {
       scrollHint.classList.remove('about-scroll-hint--active');
       overlay.removeEventListener('scroll', onOverlayScroll);
