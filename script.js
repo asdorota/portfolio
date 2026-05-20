@@ -258,7 +258,7 @@
     if (cursorTrailer) cursorTrailer.style.opacity = '0';
     if (themeMeta) { savedThemeColor = themeMeta.content; themeMeta.content = '#fffb91'; }
     if (trigger) {
-      trigger.textContent = '×';
+      trigger.textContent = '( Close )';
       trigger.removeEventListener('click', openOverlay);
       trigger.addEventListener('click', closeOverlay);
     }

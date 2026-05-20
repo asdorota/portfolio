@@ -850,9 +850,14 @@ body {
   right: 0;
   z-index: 1;
   display: flex;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   padding: 10.41px 40px 10.39px;
+  overflow: hidden;
+  background: transparent;
 }
 
 .about-overlay__inner {
@@ -919,6 +924,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .about-overlay__header {
+    padding: 10.41px 24px 10.39px;
+  }
 }
 
 @media (max-width: 767px) {
