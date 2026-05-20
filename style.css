@@ -798,12 +798,14 @@ body {
 
 /* ─── About trigger ─────────────────────────────────────────────────────── */
 
-.header__right .text-h3 {
+.header__right .text-h3,
+.about-overlay__header .text-h3:last-child {
   cursor: pointer;
   position: relative;
 }
 
-.header__right .text-h3::after {
+.header__right .text-h3::after,
+.about-overlay__header .text-h3:last-child::after {
   content: '';
   position: absolute;
   bottom: -1px;
