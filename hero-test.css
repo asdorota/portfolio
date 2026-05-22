@@ -1,0 +1,102 @@
+/* ─── Hero Test ────────────────────────────────────────────────────────────── */
+
+.hero-test {
+  position: relative;
+  width: 100%;
+  height: 653px;
+  background: radial-gradient(ellipse 100% 120% at 50% 50%, #fffef5 0%, #fffb91 55%, #f5e800 100%);
+  overflow: hidden;
+}
+
+/* Heading — centred, vertically at y=182 */
+.hero-test__heading {
+  position: absolute;
+  left: 50%;
+  top: 182px;
+  transform: translateX(-50%);
+  width: 700px;
+  margin: 0;
+  font-family: var(--font-family-font-1);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-32);
+  line-height: 1.1;
+  color: var(--color-yellow-grey-80);
+  text-align: center;
+}
+
+/* CTA button — centred at y=395 */
+.hero-test__cta {
+  position: absolute;
+  left: 50%;
+  top: 395px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border: 1.5px solid var(--color-black-solid);
+  border-radius: 999px;
+  font-family: var(--font-family-font-1);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-14);
+  line-height: 1.1;
+  color: var(--color-black-solid);
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent;
+  transition: background 200ms ease;
+}
+
+.hero-test__cta:hover {
+  background: #fff;
+}
+
+/* Pills — shared style */
+.hero-pill {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid var(--color-black-solid);
+  border-radius: 999px;
+  font-family: var(--font-family-font-1);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-14);
+  line-height: 1.1;
+  color: var(--color-black-solid);
+  white-space: nowrap;
+  background: transparent;
+  transition: background 200ms ease;
+}
+
+.hero-pill:hover {
+  background: #fff;
+}
+
+/* Individual pill positions — derived from Figma (1440×653 frame) */
+.hero-pill--fintech    { left: 10.49%; top: 32.47%; } /* x=151  y=212 */
+.hero-pill--uxui       { left: 74.79%; top: 32.47%; } /* x=1077 y=212 */
+.hero-pill--e2e        { left:  9.58%; top: 53.90%; } /* x=138  y=352 */
+.hero-pill--ios        { left: 29.44%; top: 69.52%; } /* x=424  y=454 */
+.hero-pill--ds         { left: 65.56%; top: 70.14%; } /* x=944  y=458 */
+
+/* Case studies label — centred at y=594 */
+.hero-test__case-studies {
+  position: absolute;
+  left: 50%;
+  top: 594px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family-font-1);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-14);
+  line-height: 1.1;
+  color: var(--color-black-solid);
+  white-space: nowrap;
+}
+
+.hero-test__cs-arrow {
+  flex-shrink: 0;
+}
