@@ -181,7 +181,7 @@
     '<p>I’ve spent the last few years designing and shipping products in a small, fast-moving fintech team.</p>' +
     '<p>Previous career ventures include editorial design at a rug magazine and architectural design for a small residential architecture firm. I enjoy learning new design skills and have done it all — 3D modelling, motion, branding, packaging, editorial, but I’m most passionate about solving real life problems for every day user with simple but effective design solutions.</p>' +
     '</div>' +
-    '<a class="button-link about-overlay__cv" href="assets/dorota-bojarovic-cv.pdf?v=2">' +
+    '<a class="button-link about-overlay__cv" href="assets/DorotaBojarovicCV26.pdf">' +
     '<span class="text-button">Download my CV</span>' +
     '<span class="icon icon--chevron-right" aria-hidden="true">' +
     '<img src="images/chevron-right.svg" alt="" width="24" height="24" />' +
